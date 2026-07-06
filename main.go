@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func luasLingkaran(nums int) int {
-	phi := 22 / 7
+func luasLingkaran(nums float64) float64 {
+	phi := 3.14
 	var search = nums * nums * phi
 	return search
 }
@@ -16,8 +16,9 @@ func kelilingLingkaran(nums float64) float64 {
 }
 
 func main() {
-	luas := luasLingkaran(7)
-	keliling := kelilingLingkaran(7)
-	fmt.Println("Luas Lingkaran :", luas)
-	fmt.Println("Keliling Lingkaran :", keliling)
+	var nums float64
+	fmt.Printf("\n-------Hitung Luas dan Keliling Lingkaran-------\n\nInput Panjang Jari- Jari : ")
+	fmt.Scanf("%g", &nums)
+	fmt.Printf("\nLuas Lingkaran : %1.f \n", luasLingkaran(nums))
+	fmt.Printf("Keliling Lingkaran : %1.f \n\n--------Succes--------\n\n\n", kelilingLingkaran(nums))
 }
